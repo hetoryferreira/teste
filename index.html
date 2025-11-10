@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sueny Sex Shop - Acessórios & Sensualidade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --primary: #e91e63;
+      --primary-dark: #c2185b;
+      --primary-soft: #ffe6f0;
+      --accent: #ff9800;
+      --bg: #faf7fb;
+      --text: #222;
+      --muted: #777;
+      --border: #e0d6ea;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.06);
+      --shadow-strong: 0 18px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* TOP BAR */
+
+    .top-bar {
+      width: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      text-align: center;
+      font-size: 13px;
+      padding: 8px 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* LAYOUT BASE */
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 16px 80px;
+    }
+
+    /* HEADER */
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 18px;
+      background: #fff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      margin-top: -22px;
+      position: relative;
+      z-index: 10;
+      border: 1px solid #f0e5f5;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 0, #fff5f9 0, var(--primary) 40%, #4a154b 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 22px;
+      box-shadow: 0 6px 16px rgba(233, 30, 99, 0.45);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text span:first-child {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .logo-text span:last-child {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .search-bar {
+      flex: 1;
+      display: flex;
+      max-width: 500px;
+      gap: 6px;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 9px 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      font-size: 13px;
+    }
+
+    .search-bar button {
+      padding: 9px 14px;
+      border-radius: var(--radius-sm);
+      border: none;
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.15s ease-out;
+    }
+
+    .search-bar button:hover {
+      background: var(--primary-dark);
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+      font-size: 12px;
+    }
+
+    .header-phone {
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+
+    .header-whatsapp {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* NAV */
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      margin-bottom: 14px;
+    }
+
+    .nav a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      background: #fff;
+      border: 1px solid #f0e5f5;
+      color: var(--muted);
+      transition: 0.15s ease-out;
+    }
+
+    .nav a:hover {
+      border-color: var(--primary);
+      color: var(--primary-dark);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav a.nav-highlight {
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      border-color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* HERO / BANNER */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .hero-main {
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #fff0f6, #ffe6f0);
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid #f5d6e9;
+    }
+
+    .hero-title {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .hero-title span {
+      color: var(--primary-dark);
+    }
+
+    .hero-text {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+    .hero-pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px dashed #f0aac7;
+      color: var(--primary-dark);
+    }
+
+    .hero-actions {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .btn-primary {
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      box-shadow: 0 10px 26px rgba(233, 30, 99, 0.45);
+      transition: 0.15s ease-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-strong);
+    }
+
+    .btn-outline {
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--primary);
+      background: #fff;
+      color: var(--primary-dark);
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.15s ease-out;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary-soft);
+    }
+
+    .hero-side {
+      border-radius: var(--radius-lg);
+      background: #fff;
+      padding: 14px 16px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid #f0e5f5;
+      font-size: 12px;
+    }
+
+    .hero-side h3 {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .hero-side ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .hero-side li {
+      padding: 4px 0;
+      color: var(--muted);
+    }
+
+    /* MAIN CONTENT: SIDEBAR + PRODUCTS */
+
+    .main-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .sidebar {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 14px 14px 16px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid #f0e5f5;
+    }
+
+    .sidebar h3 {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .sidebar-section {
+      margin-bottom: 14px;
+      border-bottom: 1px solid #f5edf9;
+      padding-bottom: 12px;
+    }
+
+    .sidebar-section:last-child {
+      border-bottom: none;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      font-size: 13px;
+    }
+
+    .sidebar li {
+      margin: 4px 0;
+    }
+
+    .sidebar a {
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover {
+      color: var(--primary-dark);
+    }
+
+    .price-range {
+      display: flex;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .price-range input {
+      flex: 1;
+      padding: 5px 6px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      font-size: 12px;
+    }
+
+    .btn-filter {
+      margin-top: 6px;
+      width: 100%;
+      padding: 6px 10px;
+      font-size: 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--primary);
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      cursor: pointer;
+    }
+
+    /* PRODUCT LIST */
+
+    .products-area {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .products-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .products-header span {
+      color: var(--muted);
+    }
+
+    .products-sort {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+    }
+
+    .products-sort select {
+      padding: 5px 8px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      background: #fff;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      border: 1px solid #f0e5f5;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      font-size: 13px;
+      transition: 0.15s ease-out;
+    }
+
+    .product-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-strong);
+      border-color: #e3c5ef;
+    }
+
+    .product-image-wrapper {
+      position: relative;
+      background: #fff6fb;
+      padding: 8px;
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+    }
+
+    .product-body {
+      padding: 10px 12px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .product-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .product-category {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .product-desc {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .product-price {
+      margin-top: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .product-price-main {
+      font-weight: 600;
+      color: var(--primary-dark);
+      font-size: 14px;
+    }
+
+    .product-price-old {
+      font-size: 11px;
+      color: var(--muted);
+      text-decoration: line-through;
+    }
+
+    .product-meta {
+      margin-top: 4px;
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .product-actions {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .btn-whatsapp {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(90deg, #25d366, #128c7e);
+      color: #fff;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 10px 26px rgba(18, 140, 126, 0.45);
+      transition: 0.15s ease-out;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-strong);
+    }
+
+    .btn-details {
+      width: 100%;
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 12px;
+      cursor: pointer;
+      color: var(--muted);
+    }
+
+    /* INFO SECTION */
+
+    .info-section {
+      margin-top: 24px;
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      border: 1px solid #f0e5f5;
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+
+    .info-block h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .info-block p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      margin-top: 22px;
+      padding-top: 12px;
+      font-size: 11px;
+      color: var(--muted);
+      border-top: 1px solid #e2d7ec;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-color: #e0bfd9;
+    }
+
+    /* FLOATING WHATSAPP */
+
+    .whatsapp-floating {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      z-index: 50;
+    }
+
+    .whatsapp-floating-label {
+      background: rgba(0, 0, 0, 0.72);
+      color: #eafff6;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      border: 1px solid rgba(37, 211, 102, 0.5);
+    }
+
+    .whatsapp-floating-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: none;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 18px 40px rgba(18, 140, 126, 0.9);
+      transition: 0.15s ease-out;
+    }
+
+    .whatsapp-floating-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 22px 50px rgba(18, 140, 126, 1);
+    }
+
+    .whatsapp-floating-btn span {
+      font-size: 26px;
+      color: #fff;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .main-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .header {
+        flex-wrap: wrap;
+      }
+
+      .header-right {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        padding: 12px;
+      }
+
+      .page {
+        padding: 10px 10px 80px;
+      }
+
+      .nav {
+        gap: 6px;
+      }
+
+      .nav a {
+        font-size: 12px;
+        padding: 5px 8px;
+      }
+
+      .hero-main {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- BARRA DE TOPO -->
+  <div class="top-bar">
+    Sueny Sex Shop - Passos/MG • Atendimento e envios pelo WhatsApp: (35) 98414-1473
+  </div>
+
+  <div class="page">
+    <!-- CABEÇALHO -->
+    <header class="header">
+      <div class="header-left">
+        <div class="logo-circle">S</div>
+        <div class="logo-text">
+          <span>Sueny Sex Shop</span>
+          <span>Acessórios, lingerie & bem-estar</span>
+        </div>
+      </div>
+
+      <form class="search-bar" onsubmit="event.preventDefault();">
+        <input type="text" placeholder="Busque por categoria ou produto (ex: lingerie, kit presente)..." />
+        <button type="submit">Buscar</button>
+      </form>
+
+      <div class="header-right">
+        <div class="header-phone">WhatsApp: (35) 98414-1473</div>
+        <div class="header-whatsapp">Atendimento humanizado e discreto 💬</div>
+      </div>
+    </header>
+
+    <!-- MENU PRINCIPAL -->
+    <nav class="nav">
+      <a href="#home" class="nav-highlight">Início</a>
+      <a href="#lingerie">Lingerie & Fantasias</a>
+      <a href="#acessorios">Acessórios & Kits</a>
+      <a href="#bem-estar">Bem-estar & autocuidado</a>
+      <a href="#promocoes">Ofertas</a>
+      <a href="#info">Como funciona</a>
+    </nav>
+
+    <!-- HERO / BANNER -->
+    <section class="hero" id="home">
+      <div class="hero-main">
+        <div>
+          <h1 class="hero-title">
+            Intimidade com <span>carinho, cuidado</span> e descrição.
+          </h1>
+          <p class="hero-text">
+            Catálogo de acessórios, lingeries e produtos de bem-estar para todos os estilos.
+            Você escolhe pelo site e finaliza tudo diretamente pelo WhatsApp, com atendimento próximo
+            e envio discreto.
+          </p>
+          <div class="hero-highlights">
+            <span class="hero-pill">Envio discreto em embalagem neutra</span>
+            <span class="hero-pill">Atendimento exclusivo via WhatsApp</span>
+            <span class="hero-pill">Sugestões para iniciantes e presentes</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-primary" type="button" onclick="openWhatsAppGeneric()">
+            💬 Ver catálogo e falar no WhatsApp
+          </button>
+          <button class="btn-outline" type="button" onclick="scrollToSection('lingerie')">
+            Ver categorias principais
+          </button>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <h3>Como comprar na Sueny Sex Shop</h3>
+        <ul>
+          <li>1. Navegue pelas categorias e escolha os produtos.</li>
+          <li>2. Clique em "Comprar pelo WhatsApp" no produto desejado.</li>
+          <li>3. Tire dúvidas, combine tamanhos e ajuste o pedido direto com a consultora.</li>
+          <li>4. Combine forma de pagamento e entrega de forma segura e discreta.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- LAYOUT PRINCIPAL: CATEGORIAS + PRODUTOS -->
+    <section class="main-layout">
+      <!-- LADO ESQUERDO: CATEGORIAS / FILTROS -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <h3>Categorias</h3>
+          <ul>
+            <li><a href="#lingerie">Lingerie & Fantasias <span>24</span></a></li>
+            <li><a href="#acessorios">Acessórios & Kits <span>18</span></a></li>
+            <li><a href="#bem-estar">Bem-estar & autocuidado <span>12</span></a></li>
+            <li><a href="#presentes">Presentes & surpresas <span>10</span></a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Filtros básicos</h3>
+          <div class="price-range">
+            <input type="text" placeholder="Preço mín." />
+            <input type="text" placeholder="Preço máx." />
+          </div>
+          <button class="btn-filter" type="button">
+            Aplicar filtros (visual apenas)
+          </button>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Perfis</h3>
+          <ul>
+            <li><a href="#iniciantes">Para iniciantes</a></li>
+            <li><a href="#casais">Para casais</a></li>
+            <li><a href="#presentes">Para presentear</a></li>
+            <li><a href="#autocuidado">Autocuidado</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- LADO DIREITO: PRODUTOS -->
+      <div class="products-area">
+        <div class="products-header">
+          <div>
+            <strong id="lingerie">Lingerie & Fantasias</strong><br />
+            <span>Alguns modelos em destaque. Catálogo completo no WhatsApp.</span>
+          </div>
+          <div class="products-sort">
+            <span>Ordenar por:</span>
+            <select>
+              <option>Mais vistos</option>
+              <option>Menor preço</option>
+              <option>Maior preço</option>
+              <option>Novidades</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="products-grid">
+          <!-- PRODUTO 1 -->
+          <article class="product-card">
+            <div class="product-image-wrapper">
+              <span class="product-badge">Mais vendido</span>
+              <img src="https://via.placeholder.com/400x300/f8bbd0/ffffff?text=Lingerie"
+                   alt="Conjunto de lingerie em renda suave, cor marcante" />
+            </div>
+            <div class="product-body">
+              <div class="product-name">Conjunto Lingerie Elegance</div>
+              <div class="product-category">Categoria: Lingerie & Fantasias</div>
+              <p class="product-desc">
+                Conjunto em renda suave com sustentação confortável, pensado para valorizar a silhueta
+                em diferentes formatos de corpo.
+              </p>
+              <div class="product-price">
+                <span class="product-price-main">R$ 189,90</span>
+                <span class="product-price-old">R$ 219,90</span>
+              </div>
+              <div class="product-meta">
+                <span>Disponível em várias cores</span>
+                <span>Visualizações (exemplo): 132</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-whatsapp" type="button"
+                        onclick="openWhatsAppProduct('Conjunto Lingerie Elegance')">
+                  💬 Comprar pelo WhatsApp
+                </button>
+                <button class="btn-details" type="button">
+                  Ver detalhes (visual)
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUTO 2 -->
+          <article class="product-card">
+            <div class="product-image-wrapper">
+              <span class="product-badge">Novo</span>
+              <img src="https://via.placeholder.com/400x300/f48fb1/ffffff?text=Body"
+                   alt="Body em renda com recortes estratégicos para valorizar o corpo" />
+            </div>
+            <div class="product-body">
+              <div class="product-name">Body Sensual Comfort</div>
+              <div class="product-category">Categoria: Lingerie & Fantasias</div>
+              <p class="product-desc">
+                Body em renda com recortes delicados, ideal para quem busca conforto sem abrir mão
+                de um visual marcante.
+              </p>
+              <div class="product-price">
+                <span class="product-price-main">R$ 169,90</span>
+              </div>
+              <div class="product-meta">
+                <span>Indicado para presentear</span>
+                <span>Visualizações (exemplo): 87</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-whatsapp" type="button"
+                        onclick="openWhatsAppProduct('Body Sensual Comfort')">
+                  💬 Comprar pelo WhatsApp
+                </button>
+                <button class="btn-details" type="button">
+                  Ver detalhes (visual)
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUTO 3 -->
+          <article class="product-card" id="acessorios">
+            <div class="product-image-wrapper">
+              <span class="product-badge">Kit especial</span>
+              <img src="https://via.placeholder.com/400x300/f06292/ffffff?text=Kit"
+                   alt="Kit presente com itens selecionados para momentos a dois" />
+            </div>
+            <div class="product-body">
+              <div class="product-name">Kit Presente Momentos a Dois</div>
+              <div class="product-category">Categoria: Acessórios & Kits</div>
+              <p class="product-desc">
+                Combinação de itens selecionados para criar uma experiência completa, perfeita para datas
+                especiais e surpresas a dois.
+              </p>
+              <div class="product-price">
+                <span class="product-price-main">R$ 249,90</span>
+                <span class="product-price-old">R$ 279,90</span>
+              </div>
+              <div class="product-meta">
+                <span>Ótima opção para presentear</span>
+                <span>Visualizações (exemplo): 154</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-whatsapp" type="button"
+                        onclick="openWhatsAppProduct('Kit Presente Momentos a Dois')">
+                  💬 Comprar pelo WhatsApp
+                </button>
+                <button class="btn-details" type="button">
+                  Ver detalhes (visual)
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUTO 4 -->
+          <article class="product-card" id="bem-estar">
+            <div class="product-image-wrapper">
+              <span class="product-badge">Queridinho</span>
+              <img src="https://via.placeholder.com/400x300/fce4ec/4a148c?text=Bem-Estar"
+                   alt="Linha de produtos focados em bem-estar e autocuidado" />
+            </div>
+            <div class="product-body">
+              <div class="product-name">Linha Bem-estar & Autocuidado</div>
+              <div class="product-category">Categoria: Bem-estar & autocuidado</div>
+              <p class="product-desc">
+                Itens pensados para relaxamento, massagem e cuidado pessoal, ideais para quem quer
+                reservar um momento só seu.
+              </p>
+              <div class="product-price">
+                <span class="product-price-main">A partir de R$ 59,90</span>
+              </div>
+              <div class="product-meta">
+                <span>Perfeito para autocuidado</span>
+                <span>Visualizações (exemplo): 98</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-whatsapp" type="button"
+                        onclick="openWhatsAppProduct('Linha Bem-estar & Autocuidado')">
+                  💬 Ver opções no WhatsApp
+                </button>
+                <button class="btn-details" type="button">
+                  Ver detalhes (visual)
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO INFORMATIVA -->
+    <section class="info-section" id="info">
+      <div class="info-block">
+        <h3>Site como vitrine + WhatsApp</h3>
+        <p>
+          A ideia desta versão é ser uma vitrine organizada. Quem navega escolhe os produtos e finaliza
+          com a consultora pelo WhatsApp, sem precisar de login ou cadastro.
+        </p>
+      </div>
+      <div class="info-block">
+        <h3>Atualização simples de fotos e textos</h3>
+        <p>
+          Em uma próxima etapa, esse layout pode ser conectado a um painel administrativo onde uma pessoa
+          sem conhecimento técnico consegue trocar imagens, textos, preços e categorias com poucos cliques.
+        </p>
+      </div>
+      <div class="info-block">
+        <h3>Produtos mais vistos</h3>
+        <p>
+          A estrutura já está pensada para marcar visualizações e cliques de WhatsApp. Isso permite que você
+          identifique quais produtos geram mais interesse para destacar em campanhas.
+        </p>
+      </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+      <div>© <span id="year"></span> Sueny Sex Shop — Todos os direitos reservados.</div>
+      <div class="footer-links">
+        <a href="#info">Sobre a loja</a>
+        <a href="#info">Como comprar</a>
+        <a href="#info">Envio discreto</a>
+        <a href="#info">Política de privacidade (exemplo)</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <div class="whatsapp-floating">
+    <div class="whatsapp-floating-label">
+      Precisa de ajuda? Fale com a consultora
+    </div>
+    <button class="whatsapp-floating-btn" type="button" onclick="openWhatsAppGeneric()">
+      <span>💬</span>
+    </button>
+  </div>
+
+  <script>
+    // Ajusta ano no rodapé
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Trocar pelo número real em formato internacional, só dígitos: 55 + DDD + número
+    const WHATSAPP_NUMBER = "5535984141473";
+
+    function openWhatsAppGeneric() {
+      const message = encodeURIComponent(
+        "Olá, acessei o site da Sueny Sex Shop e gostaria de ver o catálogo completo 🙂"
+      );
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+      window.open(url, "_blank");
+    }
+
+    function openWhatsAppProduct(productName) {
+      const message = encodeURIComponent(
+        `Olá, me interessei pelo produto "${productName}" que vi no site da Sueny Sex Shop. Pode me passar mais detalhes?`
+      );
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+      window.open(url, "_blank");
+    }
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
